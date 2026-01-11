@@ -1,0 +1,183 @@
+.cardStack {
+  position: relative;
+  display: grid;
+  gap: 18px;
+  width: 354px;
+  max-width: 100%;
+}
+
+.card {
+  position: relative;
+  border-radius: 15px;
+  padding: 16px;
+  color: white;
+  background: linear-gradient(104.3deg, #4a4a49 2.66%, #20201f 90.57%);
+  box-shadow: 0 20px 30px rgba(16, 24, 40, 0.18);
+  overflow: hidden;
+}
+
+/* .card > :not(.watermark) {
+  position: relative;
+  z-index: 2;
+} */
+
+.cardLight {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%);
+  color: #101828;
+  margin-top: -75px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.cardPrimary {
+  width: 354px;
+  min-height: 210px;
+
+  .label {
+   color: rgba(98, 98, 96, 1);
+  }
+}
+
+.cardSecondary {
+  width: 324px;
+  min-height: 172px;
+  margin-left: 16px;
+  .label {
+    color: rgba(245, 245, 245, 1);
+  }
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.15), transparent);
+  pointer-events: none;
+}
+
+.cardLight::before {
+  content: '';
+  position: absolute;
+  right: 14px;
+  top: 16px;
+  width: 42px;
+  height: 18px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 50%, #ff6b6b, #ffd166 70%);
+  filter: blur(1px);
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.cardRow {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* .watermark {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgba(16, 24, 40, 0.15);
+  pointer-events: none;
+  z-index: 0;
+} */
+
+.chip {
+  display: inline-flex;
+  width: 38px;
+  height: 30px;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.25);
+  font-size: 18px;
+}
+
+.wifi {
+  display: inline-flex;
+  width: 26px;
+  height: 26px;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.number {
+  margin-top: 18px;
+}
+
+.numberPrimary {
+  font-family: "Gordita", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 100%;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+.numberSecondary {
+  font-family: "Gordita", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.1em;
+  color: #1b212d;
+}
+
+.label {
+  font-size: 12px;
+  opacity: 0.8;
+}
+.cardDivider {
+  width: 1px;
+  height: 20px;
+  opacity: 1;
+  margin-left: 8px;
+}
+
+.bankLabel {
+  margin-left: 7px;
+}
+.cardName {
+  font-family: Kumbh Sans;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #ffffff;
+}
+
+.brand {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(18, 25, 94, 0.9);
+  color: #ffffff;
+}
+
+.expiry {
+  font-family: "Gordita", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 2%;
+  color: #929eae;
+}
+
+
+.cardPrimary .cardDivider {
+  background: rgba(98, 98, 96, 1);
+}
+
+
+.cardSecondary .cardDivider {
+  background: rgba(245, 245, 245, 1);
+}

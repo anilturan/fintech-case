@@ -1,0 +1,87 @@
+.card {
+  width: 100%;
+  min-height: 105px;
+  border-radius: 10px;
+  padding: 24px 20px;
+  transition: transform 150ms ease;
+}
+
+/* @media (min-width: 640px) {
+  .card {
+    max-width: 222px;
+  }
+} */
+
+.cardHighlight {
+  background: #363a3f;
+}
+
+.cardDefault {
+  background: #f8f8f8;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon {
+  display: flex;
+  height: 36px;
+  width: 36px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+}
+
+.iconImage {
+  width: 20px;
+  height: 20px;
+  background-color: currentColor;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.iconHighlight {
+  background: #4a4a49;
+  color: #c8ee44;
+}
+
+.iconDefault {
+  background: #ededed;
+  color: #2f333a;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.titleHighlight {
+  color: #a5afbd;
+}
+
+.titleDefault {
+  color: #929eae;
+}
+
+.value {
+  margin-top: 8px;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.valueHighlight {
+  color: #ffffff;
+}
+
+.valueDefault {
+  color: #1b212d;
+}

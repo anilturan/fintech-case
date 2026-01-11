@@ -1,2 +1,1 @@
 # fintech-case
-# fintech-case
