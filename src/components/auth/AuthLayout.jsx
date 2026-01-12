@@ -1,8 +1,8 @@
 export default function AuthLayout({ title, subtitle, children, footer }) {
   return (
-    <div className="min-h-screen grid md:grid-cols-[1fr,1fr] font-auth text-authInk">
-      <div className="flex flex-col bg-white px-12 py-10 xl:px-[135px]">
-        <div className="flex items-center gap-[10px] text-authInk text-lg font-semibold">
+    <div className="min-h-[100dvh] grid md:grid-cols-[1fr,1fr] font-auth text-ink">
+      <div className="flex flex-col bg-white px-6 py-6 md:px-12 md:py-10 xl:px-[135px]">
+        <div className="mx-auto flex w-full max-w-md items-center gap-[10px] text-ink text-lg font-semibold md:mx-0">
           <img
             src="/assets/logo.svg"
             alt="Fintech logo"
@@ -11,7 +11,7 @@ export default function AuthLayout({ title, subtitle, children, footer }) {
           Fintech
         </div>
         <div className="flex flex-1 items-center">
-          <div className="mt-14 w-full max-w-md">
+          <div className="mx-auto mt-6 w-full max-w-md md:mx-0 md:mt-14">
             <h1 className="text-[30px] font-semibold leading-[30px]">
               {title}
             </h1>

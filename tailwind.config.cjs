@@ -7,7 +7,6 @@ module.exports = {
         primary: '#C8EE44',
         ink: '#1B212D',
         secondary: '#929EAE',
-        authInk: '#1B212D',
         authMuted: '#78778B',
         panel: '#F7F8FA',
         accent: '#0EA5E9'
