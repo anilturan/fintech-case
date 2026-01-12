@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as yup from 'yup';
 import toast from 'react-hot-toast';
@@ -6,7 +5,6 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useMutation } from '@tanstack/react-query';
 import { registerUser } from '../services/userService';
-import { useAuthStore } from '../store/authStore';
 import AuthLayout from '../components/auth/AuthLayout';
 import Input from '../components/Input';
 import AuthSwitchLink from '../components/auth/AuthSwitchLink';
@@ -24,7 +22,6 @@ const schema = yup.object({
 
 export default function SignUp() {
   const navigate = useNavigate();
-  const { token } = useAuthStore();
   const registerMutation = useMutation({
     mutationFn: registerUser
   });
@@ -37,12 +34,6 @@ export default function SignUp() {
     resolver: yupResolver(schema),
     defaultValues: { fullName: '', email: '', password: '' }
   });
-
-  useEffect(() => {
-    if (token) {
-      navigate('/dashboard');
-    }
-  }, [token, navigate]);
 
   const onSubmit = async (values) => {
     try {
@@ -108,6 +99,7 @@ export default function SignUp() {
         <Button
           type="submit"
           disabled={isSubmitting}
+          isLoading={isSubmitting}
         >
           {isSubmitting ? 'Creating account...' : 'Create Account'}
         </Button>
