@@ -43,8 +43,8 @@ export default function SignIn() {
 		try {
 			const response = await loginMutation.mutateAsync(values);
 			setAuth({
-				token: response?.token || response?.accessToken,
-				user: response?.user || { name: response?.name },
+				token: response?.accessToken,
+				user: response?.user,
 			});
 			toast.success("Hoş geldiniz!");
 			navigate("/dashboard");

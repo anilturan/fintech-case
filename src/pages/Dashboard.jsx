@@ -128,7 +128,6 @@ export default function Dashboard() {
 			expiry: `${String(wallet.expiryMonth).padStart(2, "0")}/${String(
 				wallet.expiryYear,
 			).slice(-2)}`,
-			isDefault: Boolean(wallet.isDefault),
 		}));
 	}, [walletQuery.data]);
 

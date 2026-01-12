@@ -55,7 +55,6 @@ export default function SignUp() {
   };
 
   const isSubmitting = registerMutation.isPending;
-
   return (
     <AuthLayout
       title="Create new account"
